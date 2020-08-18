@@ -1,3 +1,18 @@
 def oxford_comma(array)
-
+  last = array.last
+  if array.size == 1
+    puts array.join
+  elsif array.size == 2 
+    puts array.join('and')
+  elsif array.size == 3 
+    array.join(',')
+    array[array.size - 1] = "and"
+    array << last
+    puts 
+  else
+    last = array.last
+    array[array.size - 1] = "and"
+    array << last
+    puts array.join(',')
+  end
 end
