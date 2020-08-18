@@ -5,8 +5,10 @@ def oxford_comma(array)
   elsif array.size == 2 
     array.join(" and ")
   elsif array.size == 3 
-    array.join(',').reverse.sub(' , ', ' and ').reverse
+    array[array.size - 1] = "and"
+    array.join(' , ') << last
   else
-    array.join(',').reverse.sub(' , ', ' and ').reverse
+    array[array.size - 1] = "and"
+    array.join(' , ') << last
   end
 end
