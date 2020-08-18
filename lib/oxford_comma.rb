@@ -7,7 +7,7 @@ def oxford_comma(array)
   elsif array.size == 3 
     array[array.size - 1] = 'and'
     array << last
-    array.join(', ').reverse.sub(',', '')reverse
+    array.join(', ').reverse.sub(',', '').reverse
   else
     array[array.size - 1] = "and"
     array.join(', ') << last
